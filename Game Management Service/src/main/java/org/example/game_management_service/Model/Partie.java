@@ -23,7 +23,7 @@ public class Partie {
     @JoinColumn(name = "id_hote")
     private Joueur hote;
 
-    @OneToMany(mappedBy = "partie", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "partie", cascade = CascadeType.ALL, orphanRemoval = true)//"partie" fait reference au champs dans Participation qui fait reference a Partie (dans ce cas "partie" est le champs qui fait reference a Partie dans Participation)
     private List<Participation> participations;
 
     @ManyToOne
